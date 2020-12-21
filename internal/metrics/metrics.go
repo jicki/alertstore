@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	namespace = "alertsnitch"
+	namespace = "alertstore"
 
 	bootTime = prometheus.NewGauge(prometheus.GaugeOpts{
 		Namespace: namespace,

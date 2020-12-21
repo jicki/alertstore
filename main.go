@@ -75,6 +75,7 @@ func main() {
 	s.Start(args.Address)
 }
 
+// 获取系统传入环境变量
 func envWithDefault(key, defaultValue string) string {
 	v := os.Getenv(key)
 	if v == "" {

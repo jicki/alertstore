@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   alertsnitch:
-    image: registry.gitlab.com/yakshaving.art/alertsnitch:0.2
+    image: jicki/alertstore:1.1
     ports:
     - "9567:9567"
     environment:
