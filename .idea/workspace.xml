@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c76cc91-b90a-47b3-8a98-ce6b1bdb732a" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/alertstort.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/db/db_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/db_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/db/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/mysql.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/db/nulldb.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/nulldb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/db/nulldb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/nulldb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/db/postgres.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/postgres.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/metrics/metrics.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/metrics/metrics.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/metrics/metrics_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/metrics/metrics_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/webhook/webhook.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/webhook/webhook.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/webhook/webhook_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/webhook/webhook_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version/version_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/version/version_test.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1lwsQrhiWzO2LKrpjrv3tQcD3kD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn,https://mirrors.aliyun.com/goproxy,direct" />
+      </map>
+    </environment>
+  </component>
+</project>

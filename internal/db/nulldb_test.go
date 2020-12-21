@@ -1,9 +1,10 @@
 package db_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"gitlab.com/yakshaving.art/alertsnitch/internal/db"
+	"alertstort/internal/db"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNullDBObject(t *testing.T) {

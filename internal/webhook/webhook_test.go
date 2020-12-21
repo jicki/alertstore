@@ -4,8 +4,9 @@ import (
 	"io/ioutil"
 	"testing"
 
+	"alertstort/internal/webhook"
+
 	"github.com/stretchr/testify/assert"
-	"gitlab.com/yakshaving.art/alertsnitch/internal/webhook"
 )
 
 func TestParsingPayloadWithEmptyPayloadFails(t *testing.T) {

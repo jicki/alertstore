@@ -10,10 +10,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"gitlab.com/yakshaving.art/alertsnitch/internal"
-	"gitlab.com/yakshaving.art/alertsnitch/internal/db"
-	"gitlab.com/yakshaving.art/alertsnitch/internal/server"
-	"gitlab.com/yakshaving.art/alertsnitch/version"
+	"alertstort/internal"
+	"alertstort/internal/db"
+	"alertstort/internal/server"
+	"alertstort/version"
 )
 
 // Args are the arguments that can be passed to alertsnitch

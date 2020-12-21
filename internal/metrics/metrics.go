@@ -5,7 +5,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"gitlab.com/yakshaving.art/alertsnitch/version"
+	"alertstort/version"
 )
 
 var (

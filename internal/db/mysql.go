@@ -7,9 +7,11 @@ import (
 
 	"database/sql"
 
+	"alertstort/internal"
+
+	"alertstort/internal/metrics"
+
 	"github.com/sirupsen/logrus"
-	"gitlab.com/yakshaving.art/alertsnitch/internal"
-	"gitlab.com/yakshaving.art/alertsnitch/internal/metrics"
 )
 
 // MySQLDB A database that does nothing

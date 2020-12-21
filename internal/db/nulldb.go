@@ -3,7 +3,7 @@ package db
 import (
 	"log"
 
-	"gitlab.com/yakshaving.art/alertsnitch/internal"
+	"alertstort/internal"
 )
 
 // NullDB A database that does nothing
