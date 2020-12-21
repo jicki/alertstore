@@ -146,16 +146,5 @@ AlertSnitch writes alerts in such a way that they can be explored using
 Grafana's MySQL/Postgres Data Source plugin. Refer to Grafana documentation
 for further instructions.
 
-## Testing locally
-
-We provide a couple of Makefile tasks to make it easy to run integration tests
-locally, to get a full coverage sample run:
-
-```sh
-make bootstrap_local_testing
-make integration
-go tool cover -html=coverage.out
-make teardown_local_testing
-```
 
 [1]: https://github.com/go-sql-driver/mysql
