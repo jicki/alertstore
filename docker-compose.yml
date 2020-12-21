@@ -6,8 +6,8 @@ services:
     ports:
     - "9567:9567"
     environment:
-      ALERTSNITCH_DSN: "alertsnitch:alertsnitch@tcp(mysqldb)/alertsnitch"
-      ALERSTNITCH_BACKEND: "mysql"
+      ALERTSTORE_DSN: "alertsnitch:alertsnitch@tcp(mysqldb)/alertstore"
+      ALERTSTORE_BACKEND: "mysql"
     depends_on:
       mysqldb:
         condition: service_healthy
@@ -21,9 +21,9 @@ services:
     ports:
     - "3306:3306"
     environment:
-      MYSQL_DATABASE: alertsnitch
-      MYSQL_USER: "alertsnitch"
-      MYSQL_PASSWORD: "alertsnitch"
+      MYSQL_DATABASE: alertstore
+      MYSQL_USER: "alertstore"
+      MYSQL_PASSWORD: "alertstore"
       MYSQL_ROOT_PASSWORD: "root"
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-proot"]
