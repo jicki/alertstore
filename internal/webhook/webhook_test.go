@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"alertstort/internal/webhook"
+	"alertstore/internal/webhook"
 
 	"github.com/stretchr/testify/assert"
 )

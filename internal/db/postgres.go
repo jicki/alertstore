@@ -7,9 +7,8 @@ import (
 
 	"database/sql"
 
-	"alertstort/internal"
-
-	"alertstort/internal/metrics"
+	"alertstore/internal"
+	"alertstore/internal/metrics"
 
 	"github.com/sirupsen/logrus"
 )

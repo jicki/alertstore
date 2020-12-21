@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"alertstort/internal"
+	"alertstore/internal"
 )
 
 // Parse gets a webhook payload and parses it returning a prometheus

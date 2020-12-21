@@ -9,9 +9,9 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"alertstort/internal"
-	"alertstort/internal/metrics"
-	"alertstort/internal/webhook"
+	"alertstore/internal"
+	"alertstore/internal/metrics"
+	"alertstore/internal/webhook"
 )
 
 // SupportedWebhookVersion is the alert webhook data version that is supported

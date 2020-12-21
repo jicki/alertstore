@@ -3,7 +3,7 @@ package version_test
 import (
 	"testing"
 
-	"alertstort/version"
+	"alertstore/version"
 )
 
 func TestVersionString(t *testing.T) {

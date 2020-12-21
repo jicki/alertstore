@@ -10,10 +10,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"alertstort/internal"
-	"alertstort/internal/db"
-	"alertstort/internal/server"
-	"alertstort/version"
+	"alertstore/internal"
+	"alertstore/internal/db"
+	"alertstore/internal/server"
+	"alertstore/version"
 )
 
 // Args 定义 alertstore 传入参数的结构体变量

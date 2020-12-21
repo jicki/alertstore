@@ -3,7 +3,7 @@ package db
 import (
 	"fmt"
 
-	"alertstort/internal"
+	"alertstore/internal"
 )
 
 // SupportedModel stores the model that is supported by this application

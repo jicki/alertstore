@@ -12,9 +12,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"alertstort/internal"
-	"alertstort/internal/db"
-	"alertstort/internal/webhook"
+	"alertstore/internal"
+	"alertstore/internal/db"
+	"alertstore/internal/webhook"
 )
 
 func TestPingingDatabaseWorks(t *testing.T) {

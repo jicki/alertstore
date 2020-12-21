@@ -6,7 +6,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/assert"
 
-	"alertstort/internal/metrics"
+	"alertstore/internal/metrics"
 )
 
 func TestMetricsAreRegistered(t *testing.T) {

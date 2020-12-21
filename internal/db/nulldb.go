@@ -3,7 +3,7 @@ package db
 import (
 	"log"
 
-	"alertstort/internal"
+	"alertstore/internal"
 )
 
 // NullDB A database that does nothing

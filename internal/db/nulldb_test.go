@@ -1,7 +1,7 @@
 package db_test
 
 import (
-	"alertstort/internal/db"
+	"alertstore/internal/db"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

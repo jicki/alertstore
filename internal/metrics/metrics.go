@@ -5,7 +5,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"alertstort/version"
+	"alertstore/version"
 )
 
 var (
