@@ -1,4 +1,4 @@
-# AlertSnitch
+# AlertStore
 
 Captures Prometheus AlertManager alerts and writes them in a MySQL or
 Postgres database for future examination.
@@ -19,7 +19,7 @@ capabilities of triggered alerts is extremely valuable.
 Simply install to your $GOPATH using your GO tools
 
 ```sh
-$ go get gitlab.com/yakshaving.art/alertsnitch`
+$ go get github.com/jicki/alertstore`
 ```
 
 ## Requirements
@@ -41,15 +41,15 @@ For specifics about how to set up the MySQL DSN refer to [Go MySQL client driver
 This is a sample of a DSN that would connect to the local host over a Unix socket
 
 ```bash
-export ALERTSNITCH_BACKEND="mysql"
-export ALERTSNITCH_DSN="${MYSQL_USER}:${MYSQL_PASSWORD}@/${MYSQL_DATABASE}"
+export ALERTSTORE_BACKEND="mysql"
+export ALERTSTORE_DSN="${MYSQL_USER}:${MYSQL_PASSWORD}@/${MYSQL_DATABASE}"
 ```
 
 ### Postgres
 
 ```bash
-export ALERTSNITCH_BACKEND="postgres"
-export ALERTSNITCH_DSN="sslmode=disable user=${PGUSER} password=${PGPASSWORD} host=${PGHOST} database=${PGDATABASE}"
+export ALERTSTORE_BACKEND="postgres"
+export ALERTSTORE_DSN="sslmode=disable user=${PGUSER} password=${PGPASSWORD} host=${PGHOST} database=${PGDATABASE}"
 ```
 
 ## How to run
@@ -61,17 +61,17 @@ export ALERTSNITCH_DSN="sslmode=disable user=${PGUSER} password=${PGPASSWORD} ho
 ```sh
 $ docker run --rm \
     -p 9567:9567 \
-    -e ALERTSNITCH_DSN \
-    -e ALERTSNITCH_BACKEND \
-    registry.gitlab.com/yakshaving.art/alertsnitch
+    -e ALERTSTORE_DSN \
+    -e ALERTSTORE_BACKEND \
+    registry.gitlab.com/yakshaving.art/alertstore
 ```
 
 ### Running Manually
 
 1. Open a terminal and run the following
-1. Copy the AlertSnitch binary from your $GOPATH to `/usr/local/bin` with `sudo cp ~/go/bin/alertsnitch /usr/local/bin`
-1. Now run AlertSnitch as with just `alertsnitch`
-   - To just see the alerts that are being received, use the *null* backend with `ALERTSNITCH_BACKEND=null`
+1. Copy the AlertSnitch binary from your $GOPATH to `/usr/local/bin` with `sudo cp ~/go/bin/alertstore /usr/local/bin`
+1. Now run AlertSnitch as with just `alertstore`
+   - To just see the alerts that are being received, use the *null* backend with `ALERTSTORE_BACKEND=null`
 
 ### Setting up in AlertManager
 
@@ -81,19 +81,19 @@ forward every alert to it on the `/webhooks` path.
 ```yaml
 ---
 receivers:
-- name: alertsnitch
+- name: alertstore
   webhook_configs:
-    - url: http://<alertsnitch-host-or-ip>:9567/webhook
+    - url: http://<alertstore-host-or-ip>:9567/webhook
 ```
 
 Then add the route
 
 ```yaml
-# We want to send all alerts to alertsnitch and then continue to the
+# We want to send all alerts to alertstore and then continue to the
 # appropiate handler.
 route:
   routes:
-  - receiver: alertsnitch
+  - receiver: alertstore
     continue: true
 ```
 
@@ -106,9 +106,9 @@ route:
 
 ### Environment variables
 
-- **ALERTSNITCH_DSN** *required* database connection query string
-- **ALERTSNITCH_ADDR** same as **-listen.address**
-- **ALERTSNITCH_BACKEND**  same as **-database-backend**
+- **ALERTSTORE_DSN** *required* database connection query string
+- **ALERTSTORE_ADDR** same as **-listen.address**
+- **ALERTSTORE_BACKEND**  same as **-database-backend**
 
 ### Readiness probe
 

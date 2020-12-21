@@ -35,13 +35,13 @@ func main() {
 	// 获取程序版本
 	flag.BoolVar(&args.Version, "version", false, "print the version and exit")
 	// 设置程序绑定端口, 默认为 9567
-	flag.StringVar(&args.Address, "listen.address", envWithDefault("ALERTSNITCH_ADDR", ":9567"), "address in which to listen for http requests, (also ALERTSNITCH_ADDR)")
+	flag.StringVar(&args.Address, "listen.address", envWithDefault("ALERTSTORE_ADDR", ":9567"), "address in which to listen for http requests, (also ALERTSTORE_ADDR)")
 	// 配置是否开启 debug 级别, 是否打开 Logrus Debug 级别, 默认为 false
 	flag.BoolVar(&args.Debug, "debug", false, "enable debug mode, which dumps alerts payloads to the log as they arrive")
 	// 设置后端数据存储, 支持 Mysql 与 postgresql.
-	flag.StringVar(&args.DBBackend, "database-backend", envWithDefault("ALERTSNITCH_BACKEND", "mysql"), "database backend, allowed are mysql, postgres, and null (also ALERTSNITCH_BACKEND")
+	flag.StringVar(&args.DBBackend, "database-backend", envWithDefault("ALERTSTORE_BACKEND", "mysql"), "database backend, allowed are mysql, postgres, and null (also ALERTSTORE_BACKEND")
 	// 设置后端数据存储的 DSN. Mysql-如: ${MYSQL_USER}:${MYSQL_PASSWORD}@/${MYSQL_DATABASE}
-	flag.StringVar(&args.DSN, "dsn", os.Getenv(internal.DSNVar), "Database DSN (also ALERTSNITCH_DSN)")
+	flag.StringVar(&args.DSN, "dsn", os.Getenv(internal.DSNVar), "Database DSN (also ALERTSTORE_DSN)")
 	// 设置数据库最大连接数.
 	flag.IntVar(&args.MaxOpenConns, "max-open-connections", 2, "maximum number of connections in the pool")
 	// 设置数据库最大闲置连接数.
