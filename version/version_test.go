@@ -11,7 +11,7 @@ func TestVersionString(t *testing.T) {
 	version.Date = "today"
 	version.Version = "0.0.1"
 
-	expected := "alertsnitch Version: 0.0.1 Commit: mycommit Date: today"
+	expected := "alertstore Version: 0.0.1 Commit: mycommit Date: today"
 	if version.GetVersion() != expected {
 		t.Fatalf("invalid version %s expected %s", version.GetVersion(), expected)
 	}

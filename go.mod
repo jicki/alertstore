@@ -1,4 +1,4 @@
-module alertstort
+module alertstore
 
 go 1.15
 

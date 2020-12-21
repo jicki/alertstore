@@ -3,7 +3,7 @@ package version
 import "fmt"
 
 // Name is the application name
-const Name = "alertsnitch"
+const Name = "alertstore"
 
 // Version is the application Version
 var Version string
