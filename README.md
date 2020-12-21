@@ -63,7 +63,7 @@ $ docker run --rm \
     -p 9567:9567 \
     -e ALERTSTORE_DSN \
     -e ALERTSTORE_BACKEND \
-    registry.gitlab.com/yakshaving.art/alertstore
+    jicki/alertstore:1.1
 ```
 
 ### Running Manually
