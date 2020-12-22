@@ -24,11 +24,11 @@ $ go get github.com/jicki/alertstore`
 
 ## Requirements
 
-To run AlertSnitch requires a MySQL or Postgres database to write to.
+To run AlertStore requires a MySQL or Postgres database to write to.
 
-The database must be initialized with AlertSnitch model.
+The database must be initialized with AlertStore model.
 
-AlertSnitch will not become online until the model is up to date with the
+AlertStore will not become online until the model is up to date with the
 expected one. Bootstrapping scripts are provided in the [scripts][./script.d]
 folder.
 
@@ -69,13 +69,13 @@ $ docker run --rm \
 ### Running Manually
 
 1. Open a terminal and run the following
-1. Copy the AlertSnitch binary from your $GOPATH to `/usr/local/bin` with `sudo cp ~/go/bin/alertstore /usr/local/bin`
-1. Now run AlertSnitch as with just `alertstore`
+1. Copy the AlertStore binary from your $GOPATH to `/usr/local/bin` with `sudo cp ~/go/bin/alertstore /usr/local/bin`
+1. Now run AlertStore as with just `alertstore`
    - To just see the alerts that are being received, use the *null* backend with `ALERTSTORE_BACKEND=null`
 
 ### Setting up in AlertManager
 
-Once AlertSnitch is up and running, configure the Prometheus Alert Manager to
+Once AlertStore is up and running, configure the Prometheus Alert Manager to
 forward every alert to it on the `/webhooks` path.
 
 ```yaml
@@ -112,10 +112,10 @@ route:
 
 ### Readiness probe
 
-AlertSnitch offers a `/-/ready` endpoint which will return 200 if the
+AlertStore offers a `/-/ready` endpoint which will return 200 if the
 application is ready to accept WebHook posts.
 
-During startup AlertSnitch will probe the MySQL database and the database
+During startup AlertStore will probe the MySQL database and the database
 model version. If everything is as expected it will set itself as ready.
 
 In case of failure it will return a 500 and will write the error in the
@@ -123,7 +123,7 @@ response payload.
 
 ### Liveliness probe
 
-AlertSnitch offers a `/-/health` endpoint which will return 200 as long as
+AlertStore offers a `/-/health` endpoint which will return 200 as long as
 the MySQL/Postgres database is reachable.
 
 In case of error it will return a 500 and will write the error in the
@@ -131,18 +131,18 @@ response payload.
 
 ### Metrics
 
-AlertSnitch provides Prometheus metrics on `/metrics` as per Prometheus
+AlertStore provides Prometheus metrics on `/metrics` as per Prometheus
 convention.
 
 ### Security
 
-There is no offering of security of any kind. AlertSnitch is not ment to be
+There is no offering of security of any kind. AlertStore is not ment to be
 exposed to the internet but to be executed in an internal network reachable
 by the alert manager.
 
 ### Grafana Compatibility
 
-AlertSnitch writes alerts in such a way that they can be explored using
+AlertStore writes alerts in such a way that they can be explored using
 Grafana's MySQL/Postgres Data Source plugin. Refer to Grafana documentation
 for further instructions.
 
